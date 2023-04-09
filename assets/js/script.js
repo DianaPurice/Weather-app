@@ -32,12 +32,16 @@ function displayToday() {
 }
 function displayForecast() {
   // create html elemets to be appended
+  var forecastTitle = $("<h3>");
   var forecastDay = $("<div>");
-  var date = $("<h3>");
+  var date = $("<h4>");
   var icon = $("<image>");
   var temperature = $("<p>");
   var humidity = $("<p>");
   var windSpeed = $("<p>");
+
+  // add text values to the elements
+  forecastTitle.text("5-Day Forecast:");
 
   // add class to the elements
   forecastDay.addClass("forecastSection");
@@ -53,6 +57,7 @@ function displayForecast() {
   forecastDay.append(humidity);
   forecastDay.append(windSpeed);
   // append the forecast div to the forecast section
+  forecast.append(forecastTitle);
   forecast.append(forecastDay);
 }
 
