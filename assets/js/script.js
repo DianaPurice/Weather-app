@@ -84,8 +84,13 @@ $("#search-button").on("click", function (event) {
   cities.push(city);
   // create buttons for the city
   renderCities();
+  // empty the today's and forecast weather sections
+  today.empty();
+  forecast.empty();
+  // display today's weather
+  displayToday();
+  // display the forecat weather
+  displayForecast();
 });
 
 renderCities();
-displayToday();
-displayForecast();
